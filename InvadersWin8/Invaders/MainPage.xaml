@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="InvadersWin8.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:InvadersWin8"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource AppBarBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto" MinHeight="52"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="TitlePanel" Grid.Row="1">
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="2" Margin="0,0,0,0" Background="{ThemeResource AppBarBackgroundThemeBrush}">
+            <StackPanel Width="720" Height="540" Background="Black">
+                <Canvas x:Name="canvas" Background="Black" Width="720" Height="540">
+                </Canvas>
+                <Border x:Name="help" BorderBrush="White" Margin="100 -420 0 0" BorderThickness="2" Width="520" Height="300" HorizontalAlignment="Left"
+        VerticalAlignment="Top" CornerRadius="2">
+                    <Canvas Visibility="Visible" Width="516" Height="296" Opacity="0.9" Background="Black">
+                        <TextBlock x:Name="lblInfo" Text="Click button to start a game" FontSize="20" Margin="160,50,0,0" />
+                        <TextBlock x:Name="Manualy" Text="Use left right arrows to move space ship / up arrow for fire" FontSize="16" Margin="30,100,0,0" />
+                        <Button x:Name="start" Content="Start!" HorizontalAlignment="Left" Height="44" Margin="200,200,0,0" VerticalAlignment="Top" Width="126" Click="start_Click"/>
+                    </Canvas>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
